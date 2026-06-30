@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # Load API key from environment variable
 API_KEY = os.environ.get("LLM_API_KEY")
 API_URL = "https://api.groq.com/openai/v1/chat/completions"  # Groq (free, OpenAI-compatible)
-MODEL = "qwen/qwen3.6-27b"
+MODEL = "llama-3.3-70b-versatile"
 
 
 app = FastAPI(title="Simple Chatbot API")
