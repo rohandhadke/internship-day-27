@@ -19,7 +19,7 @@ ALLOWED_ORIGINS = [
     "http://localhost:3000",      # Alternative local port
     "http://127.0.0.1:5173",
     "http://127.0.0.1:3000",
-    "https://*.vercel.app",       # All Vercel deployments
+    "https://internship-day-27.vercel.app",  # Your Vercel frontend
 ]
 
 app.add_middleware(
