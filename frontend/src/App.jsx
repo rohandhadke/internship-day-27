@@ -12,8 +12,8 @@ function App() {
 
   const messagesEndRef = useRef(null);
 
-  // Backend URL
-  const API_URL = "http://127.0.0.1:8000/chat";
+  // Backend URL - use environment variable or fallback to localhost for dev
+  const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/chat";
 
   // Auto Scroll
   useEffect(() => {

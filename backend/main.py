@@ -13,9 +13,18 @@ MODEL = "qwen/qwen3.6-27b"
 
 app = FastAPI(title="Simple Chatbot API")
 
+# CORS configuration - allow both local dev and production
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",      # Vite dev server
+    "http://localhost:3000",      # Alternative local port
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:3000",
+    "https://*.vercel.app",       # All Vercel deployments
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Vite's default dev port
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
